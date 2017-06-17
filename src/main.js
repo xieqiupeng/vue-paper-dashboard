@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import vClickOutside from 'v-click-outside'
+import VueAnalytics from 'vue-analytics'
 
 // Plugins
 import GlobalComponents from './gloablComponents'
@@ -28,6 +29,14 @@ Vue.use(SideBar)
 const router = new VueRouter({
   routes, // short for routes: routes
   linkActiveClass: 'active'
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-46172202-9',
+  router,
+  autoTracking: {
+    pageviewOnLoad: false
+  }
 })
 
 // global library setup
