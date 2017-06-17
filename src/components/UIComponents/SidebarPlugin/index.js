@@ -2,6 +2,8 @@ import Sidebar from './SideBar.vue'
 
 const SidebarStore = {
   showSidebar: false,
+  backgroundColor: 'black',
+  activeColor: 'success',
   sidebarLinks: [
     {
       name: 'Dashboard',
