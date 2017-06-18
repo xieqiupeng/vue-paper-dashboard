@@ -27,38 +27,39 @@
 
         <li class="button-container">
           <div class="">
-            <a target="_blank" class="btn btn-info btn-block btn-fill">Download for Free</a>
+            <a href="https://github.com/cristijora/vue-paper-dashboard/archive/master.zip" class="btn btn-info btn-block btn-fill">Free Download</a>
           </div>
         </li>
 
         <li class="button-container">
           <div class="">
-            <a target="_blank" class="btn btn-danger btn-block btn-fill">View Documentation</a>
+            <a href="https://cristijora.github.io/vue-paper-dashboard-docs/" class="btn btn-danger btn-block btn-fill">Documentation</a>
           </div>
         </li>
 
         <li class="header-title">Thank you for sharing!</li>
 
         <li class="button-container">
-          work in progress
           <social-sharing url="https://cristijora.github.io/vue-paper-dashboard/" inline-template
                           title="Vue Paper Dashboard - Free Bootstrap Admin Template for Vue.js"
                           hashtags="vuejs, dashboard, bootstrap" twitter-user="creativetim">
             <div>
-              <network network="facebook">
-                <i class="fa fa-fw fa-facebook"></i> Facebook
+              <network network="facebook" class="btn btn-facebook btn-icon">
+                <i class="fa fa-fw fa-facebook"></i>
               </network>
-              <network network="googleplus">
-                <i class="fa fa-fw fa-google-plus"></i> Google +
+              <network network="pinterest" class="btn btn-pinterest btn-icon">
+                <i class="fa fa-fw fa-pinterest"></i>
               </network>
-              <network network="pinterest">
-                <i class="fa fa-fw fa-pinterest"></i> Pinterest
-              </network>
-              <network network="twitter">
-                <i class="fa fa-fw fa-twitter"></i> Twitter
+              <network network="twitter" class="btn btn-twitter btn-icon">
+                <i class="fa fa-fw fa-twitter"></i>
               </network>
             </div>
           </social-sharing>
+        </li>
+
+        <li class="button-container">
+    		<gh-btns-star slug="cristijora/vue-paper-dashboard" show-count></gh-btns-star>
+    		<gh-btns-fork slug="cristijora/vue-paper-dashboard" show-count></gh-btns-fork>
         </li>
 
       </ul>

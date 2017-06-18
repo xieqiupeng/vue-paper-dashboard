@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import vClickOutside from 'v-click-outside'
 import VueAnalytics from 'vue-analytics'
 import SocialSharing from 'vue-social-sharing'
+import VueGitHubButtons from 'vue-github-buttons'
+import 'vue-github-buttons/dist/vue-github-buttons.css'
 
 // Plugins
 import GlobalComponents from './gloablComponents'
@@ -26,6 +28,7 @@ Vue.use(vClickOutside)
 Vue.use(Notifications)
 Vue.use(SideBar)
 Vue.use(SocialSharing)
+Vue.use(VueGitHubButtons, { useCache: true })
 
 // configure router
 const router = new VueRouter({

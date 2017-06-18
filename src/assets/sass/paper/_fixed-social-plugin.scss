@@ -7,7 +7,7 @@
 }
 
 .fixed-plugin{
-    position: absolute;
+    position: fixed;
     top: 180px;
     right: 0;
     width: 64px;
@@ -86,7 +86,7 @@
     background-color: #68B3C8;
 }
 .fixed-plugin .badge-success{
-    background-color: #7AC29A;
+    background-color: #41B883;
 }
 .fixed-plugin .badge-warning{
     background-color: #F3BB45;
@@ -101,9 +101,10 @@
 }
 .fixed-plugin .dropdown-menu li{
     display: block;
-    padding: 10px 5px;
+    padding: 5px 5px;
     width: 25%;
     float: left;
+    text-align: center;
 }
 
 .fixed-plugin li.adjustments-line,
@@ -116,9 +117,6 @@
 .fixed-plugin li.button-container{
     height: auto;
 }
-.fixed-plugin li.button-container div{
-    margin-bottom: 5px;
-}
 
 .fixed-plugin #sharrreTitle{
     text-align: center;
@@ -127,7 +125,8 @@
 }
 
 .fixed-plugin li.header-title{
-    height: 30px;
+    height: auto;
+    padding: 0;
     line-height: 35px;
     font-size: 12px;
     font-weight: 600;
@@ -149,8 +148,12 @@
       padding-left: 0;
       border-bottom: 1px solid #ddd;
       margin: 0;
+      padding-top: 0;
 }
-
+.fixed-plugin .gh-button-container{
+    float: none;
+    margin: 0;
+}
 .fixed-plugin .dropdown-menu > li > a.switch-trigger:hover,
 .fixed-plugin .dropdown-menu > li > a.switch-trigger:focus{
     background-color: transparent;
@@ -176,6 +179,37 @@
 
 .fixed-plugin .dropdown-menu{
     background: #FFFFFF;
+}
+
+.btn-facebook {
+    border-color: $social-facebook;
+    color: $social-facebook;
+
+    &:hover{
+        background-color: $social-facebook;
+        border-color: $social-facebook;
+        color: $white-color;
+    }
+}
+
+.btn-twitter {
+    border-color: $social-twitter;
+    color: $social-twitter;
+    &:hover{
+        background-color: $social-twitter;
+        border-color: $social-twitter;
+        color: $white-color;
+    }
+}
+
+.btn-pinterest {
+    border-color: $social-pinterest;
+    color: $social-pinterest;
+    &:hover{
+        background-color: $social-pinterest;
+        border-color: $social-pinterest;
+        color: $white-color;
+    }
 }
 
 @media (min-width: 992px){
