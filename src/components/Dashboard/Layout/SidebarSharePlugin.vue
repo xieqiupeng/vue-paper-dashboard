@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed-plugin"  v-click-outside="closeDropDown">
+  <div class="fixed-plugin" v-click-outside="closeDropDown">
     <div class="dropdown show-dropdown" :class="{open: isOpen}">
       <a data-toggle="dropdown">
         <i class="fa fa-cog fa-2x" @click="toggleDropDown"> </i>
@@ -91,19 +91,19 @@
       closeDropDown () {
         this.isOpen = false
       },
+      toggleList (list, itemToActivate) {
+        list.forEach((listItem) => {
+          listItem.active = false
+        })
+        itemToActivate.active = true
+      },
       changeSidebarBackground (item) {
         this.$sidebar.backgroundColor = item.color
-        this.sidebarColors.forEach((sidebarColor) => {
-          sidebarColor.active = false
-        })
-        item.active = true
+        this.toggleList(this.sidebarColors, item)
       },
       changeSidebarLinkColor (item) {
         this.$sidebar.activeColor = item.color
-        this.sidebarTextColors.forEach((sidebarColor) => {
-          sidebarColor.active = false
-        })
-        item.active = true
+        this.toggleList(this.sidebarTextColors, item)
       }
     }
   }
