@@ -1,44 +1,39 @@
 <template>
-  <div class="fixed-plugin">
+  <div class="fixed-plugin"  v-click-outside="closeDropDown">
     <div class="dropdown show-dropdown" :class="{open: isOpen}">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
+      <a data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x" @click="toggleDropDown"> </i>
       </a>
       <ul class="dropdown-menu">
         <li class="header-title">Sidebar Background</li>
         <li class="adjustments-line text-center">
-          <a href="javascript:void(0)" class="switch-trigger background-color">
-            <span class="badge filter badge-white" data-color="white" @click="changeSidebarBackground('white')"></span>
-            <span class="badge filter badge-black" data-color="black" @click="changeSidebarBackground('black')"></span>
-            <span class="badge filter badge-darkblue" data-color="darkblue"
-                  @click="changeSidebarBackground('darkblue')"></span>
+          <a class="switch-trigger background-color">
+            <span v-for="item in sidebarColors" class="badge filter"
+                  :class="[`badge-${item.color}`,{active:item.active}]"
+                  :data-color="item.color"
+                  @click="changeSidebarBackground(item)"></span>
           </a>
         </li>
 
         <li class="header-title">Sidebar Active Color</li>
         <li class="adjustments-line text-center">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <span class="badge filter badge-primary" data-color="primary"
-                  @click="changeSidebarLinkColor('primary')"></span>
-            <span class="badge filter badge-info" data-color="info" @click="changeSidebarLinkColor('info')"></span>
-            <span class="badge filter badge-success" data-color="success"
-                  @click="changeSidebarLinkColor('success')"></span>
-            <span class="badge filter badge-warning" data-color="warning"
-                  @click="changeSidebarLinkColor('warning')"></span>
-            <span class="badge filter badge-danger active" data-color="danger"
-                  @click="changeSidebarLinkColor('danger')"></span>
+          <a class="switch-trigger active-color">
+            <span v-for="item in sidebarTextColors" class="badge filter"
+                  :class="[`badge-${item.color}`,{active:item.active}]"
+                  :data-color="item.color"
+                  @click="changeSidebarLinkColor(item)"></span>
           </a>
         </li>
 
         <li class="button-container">
           <div class="">
-            <a href="#" target="_blank" class="btn btn-info btn-block btn-fill">Download for Free</a>
+            <a target="_blank" class="btn btn-info btn-block btn-fill">Download for Free</a>
           </div>
         </li>
 
         <li class="button-container">
           <div class="">
-            <a href="#" target="_blank" class="btn btn-danger btn-block btn-fill">View Documentation</a>
+            <a target="_blank" class="btn btn-danger btn-block btn-fill">View Documentation</a>
           </div>
         </li>
 
@@ -74,18 +69,41 @@
   export default{
     data () {
       return {
-        isOpen: true
+        isOpen: true,
+        sidebarColors: [
+          {color: 'white', active: false},
+          {color: 'black', active: true},
+          {color: 'darkblue', active: false}
+        ],
+        sidebarTextColors: [
+          {color: 'primary', active: false},
+          {color: 'info', active: false},
+          {color: 'success', active: true},
+          {color: 'warning', active: false},
+          {color: 'danger', active: false}
+        ]
       }
     },
     methods: {
       toggleDropDown () {
         this.isOpen = !this.isOpen
       },
-      changeSidebarBackground (color) {
-        this.$sidebar.backgroundColor = color
+      closeDropDown () {
+        this.isOpen = false
       },
-      changeSidebarLinkColor (color) {
-        this.$sidebar.activeColor = color
+      changeSidebarBackground (item) {
+        this.$sidebar.backgroundColor = item.color
+        this.sidebarColors.forEach((sidebarColor) => {
+          sidebarColor.active = false
+        })
+        item.active = true
+      },
+      changeSidebarLinkColor (item) {
+        this.$sidebar.activeColor = item.color
+        this.sidebarTextColors.forEach((sidebarColor) => {
+          sidebarColor.active = false
+        })
+        item.active = true
       }
     }
   }
