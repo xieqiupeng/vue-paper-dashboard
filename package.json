@@ -11,7 +11,7 @@
     "unit:watch": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --watch",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "deploy-demo": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
+    "deploy-demo": "npm run build && gh-pages dist"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
