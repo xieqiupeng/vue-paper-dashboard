@@ -74,8 +74,8 @@
       <file leaf-file-name="TopNavbar.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Dashboard/Layout/TopNavbar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-576">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="434">
+              <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -142,6 +142,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/UIComponents/SidebarPlugin/index.js" />
         <option value="$PROJECT_DIR$/src/components/Dashboard/Views/Overview.vue" />
+        <option value="$PROJECT_DIR$/src/components/Dashboard/Layout/TopNavbar.vue" />
       </list>
     </option>
   </component>
@@ -417,12 +418,12 @@
       <workItem from="1510025979049" duration="1688000" />
       <workItem from="1510478219748" duration="1345000" />
       <workItem from="1510481589375" duration="1812000" />
-      <workItem from="1510486391583" duration="2754000" />
+      <workItem from="1510486391583" duration="3265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7865000" />
+    <option name="totallyTimeSpent" value="8376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -812,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Dashboard/Layout/TopNavbar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="434">
+          <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
           <folding />
         </state>
       </provider>
