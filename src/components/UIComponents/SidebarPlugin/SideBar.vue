@@ -10,10 +10,10 @@
     <div class="sidebar-wrapper" id="style-3">
       <div class="logo">
         <a href="#" class="simple-text">
-            <div class="logo-img">
-                <img src="static/img/vue-logo.png" alt="">
-            </div>
-          Paper Dashboard
+            <!--<div class="logo-img">-->
+                <!--&lt;!&ndash;<img src="static/img/vue-logo.png" alt="">&ndash;&gt;-->
+            <!--</div>-->
+            统计 — — 总体概览
         </a>
       </div>
       <slot>

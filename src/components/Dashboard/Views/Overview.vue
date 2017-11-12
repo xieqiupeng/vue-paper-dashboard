@@ -2,22 +2,22 @@
   <div>
 
     <!--Stats cards-->
-    <div class="row">
-      <div class="col-lg-3 col-sm-6" v-for="stats in statsCards">
-        <stats-card>
-          <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-            <i :class="stats.icon"></i>
-          </div>
-          <div class="numbers" slot="content">
-            <p>{{stats.title}}</p>
-            {{stats.value}}
-          </div>
-          <div class="stats" slot="footer">
-            <i :class="stats.footerIcon"></i> {{stats.footerText}}
-          </div>
-        </stats-card>
-      </div>
-    </div>
+    <!--<div class="row">-->
+      <!--<div class="col-lg-3 col-sm-6" v-for="stats in statsCards">-->
+        <!--<stats-card>-->
+          <!--<div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">-->
+            <!--<i :class="stats.icon"></i>-->
+          <!--</div>-->
+          <!--<div class="numbers" slot="content">-->
+            <!--<p>{{stats.title}}</p>-->
+            <!--{{stats.value}}-->
+          <!--</div>-->
+          <!--<div class="stats" slot="footer">-->
+            <!--<i :class="stats.footerIcon"></i> {{stats.footerText}}-->
+          <!--</div>-->
+        <!--</stats-card>-->
+      <!--</div>-->
+    <!--</div>-->
 
     <!--Charts-->
     <div class="row">
