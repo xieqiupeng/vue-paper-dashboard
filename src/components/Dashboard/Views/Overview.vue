@@ -2,30 +2,30 @@
   <div>
 
     <!--Stats cards-->
-    <!--<div class="row">-->
-      <!--<div class="col-lg-3 col-sm-6" v-for="stats in statsCards">-->
-        <!--<stats-card>-->
-          <!--<div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">-->
-            <!--<i :class="stats.icon"></i>-->
-          <!--</div>-->
-          <!--<div class="numbers" slot="content">-->
-            <!--<p>{{stats.title}}</p>-->
-            <!--{{stats.value}}-->
-          <!--</div>-->
-          <!--<div class="stats" slot="footer">-->
-            <!--<i :class="stats.footerIcon"></i> {{stats.footerText}}-->
-          <!--</div>-->
-        <!--</stats-card>-->
-      <!--</div>-->
-    <!--</div>-->
+    <div class="row">
+      <div class="col-lg-3 col-sm-6" v-for="stats in statsCards">
+        <stats-card>
+          <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
+            <i :class="stats.icon"></i>
+          </div>
+          <div class="numbers" slot="content">
+            <p>{{stats.title}}</p>
+            {{stats.value}}
+          </div>
+          <div class="stats" slot="footer">
+            <i :class="stats.footerIcon"></i> {{stats.footerText}}
+          </div>
+        </stats-card>
+      </div>
+    </div>
 
     <!--Charts-->
     <div class="row">
 
       <div class="col-xs-12">
         <chart-card :chart-data="usersChart.data" :chart-options="usersChart.options">
-          <h4 class="title" slot="title">Users behavior</h4>
-          <span slot="subTitle"> 24 Hours performance</span>
+          <h4 class="title" slot="title">增加数</h4>
+          <span slot="subTitle"> 10 Days performance</span>
           <span slot="footer">
             <i class="ti-reload"></i> Updated 3 minutes ago</span>
           <div slot="legend">
@@ -83,44 +83,50 @@
         statsCards: [
           {
             type: 'warning',
-            icon: 'ti-server',
-            title: 'Capacity',
-            value: '105GB',
+            icon: 'ti-book',
+            title: '总阅读数',
+            value: '154253',
             footerText: 'Updated now',
             footerIcon: 'ti-reload'
           },
+//          server
           {
             type: 'success',
-            icon: 'ti-wallet',
-            title: 'Revenue',
-            value: '$1,345',
-            footerText: 'Last day',
-            footerIcon: 'ti-calendar'
+            icon: 'ti-server',
+            title: '总播放量',
+            value: '1242322',
+            footerText: 'Updated now',
+            footerIcon: 'ti-reload'
+//            footerText: 'Last day',
+//            footerIcon: 'ti-calendar'
           },
           {
             type: 'danger',
-            icon: 'ti-pulse',
-            title: 'Errors',
-            value: '23',
+            icon: 'ti-wallet',
+            title: '充值金额',
+            value: '14544 可可蛋',
+//            footerText: 'Updated now',
+//            footerIcon: 'ti-reload'
             footerText: 'In the last hour',
             footerIcon: 'ti-timer'
           },
           {
             type: 'info',
-            icon: 'ti-twitter-alt',
-            title: 'Followers',
-            value: '+45',
+            icon: 'ti-wallet',
+            title: '消费金额',
+            value: '14544 可可蛋',
             footerText: 'Updated now',
             footerIcon: 'ti-reload'
           }
         ],
         usersChart: {
           data: {
-            labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
+            labels: ['09-11', '09-12', '09-13', '09-14', '09-15', '09-16', '09-17', '09-18'],
             series: [
               [287, 385, 490, 562, 594, 626, 698, 895, 952],
-              [67, 152, 193, 240, 387, 435, 535, 642, 744],
-              [23, 113, 67, 108, 190, 239, 307, 410, 410]
+              [67, 152, 193, 240, 387, 435, 535, 642, 744]
+//              ,
+//              [23, 113, 67, 108, 190, 239, 307, 410, 410]
             ]
           },
           options: {
