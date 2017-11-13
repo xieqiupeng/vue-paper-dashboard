@@ -25,18 +25,33 @@ const routes = [
     children: [
       {
         path: 'overview',
-        name: 'overview',
+        name: '总体概览',
         component: Overview
       },
       {
-        path: 'stats',
-        name: 'stats',
-        component: UserProfile
+        path: 'novel-list',
+        name: '专辑排行',
+        component: NovelList
+      },
+      {
+        path: 'typography',
+        name: '专辑管理',
+        component: Typography
       },
       {
         path: 'notifications',
-        name: 'notifications',
+        name: '运营管理',
         component: Notifications
+      },
+      {
+        path: 'table-list',
+        name: '操作日志',
+        component: TableList
+      },
+      {
+        path: 'stats',
+        name: '设置',
+        component: UserProfile
       },
       {
         path: 'icons',
@@ -47,32 +62,17 @@ const routes = [
         path: 'maps',
         name: 'maps',
         component: Maps
-      },
-      {
-        path: 'typography',
-        name: 'typography',
-        component: Typography
-      },
-      {
-        path: 'table-list',
-        name: 'table-list',
-        component: TableList
-      },
-      {
-        path: 'novel-list',
-        name: 'novel-list',
-        component: NovelList
       }
     ]
   },
-  { path: '*', component: NotFound }
+  {path: '*', component: NotFound}
 ]
 
 /**
  * Asynchronously load view (Webpack Lazy loading compatible)
  * The specified component must be inside the Views folder
  * @param  {string} name  the filename (basename) of the view to load.
-function view(name) {
+ function view(name) {
    var res= require('../components/Dashboard/Views/' + name + '.vue');
    return res;
 };**/
