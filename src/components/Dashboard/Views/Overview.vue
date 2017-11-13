@@ -37,7 +37,7 @@
       </div>
 
       <div class="col-md-6 col-xs-12">
-        <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
+        <chart-card :chart-data="preferencesChart.data" chart-type="Pie">
           <h4 class="title" slot="title">Email Statistics</h4>
           <span slot="subTitle"> Last campaign performance</span>
           <span slot="footer">
@@ -70,6 +70,7 @@
 <script>
   import StatsCard from 'components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
+
   export default {
     components: {
       StatsCard,
@@ -171,8 +172,6 @@
       }
     }
   }
-
 </script>
 <style>
-
 </style>

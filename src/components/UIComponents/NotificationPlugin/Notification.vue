@@ -89,7 +89,7 @@
 
   .fade-enter,
   .fade-leave-to
-  /* .fade-leave-active in <2.1.8 */
+    /* .fade-leave-active in <2.1.8 */
 
   {
     opacity: 0
@@ -138,7 +138,7 @@
       margin-right: 5px;
     }
 
-    .close~span {
+    .close ~ span {
       display: block;
       max-width: 89%;
     }

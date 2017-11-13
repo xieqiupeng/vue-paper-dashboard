@@ -4,13 +4,18 @@ const SidebarStore = {
   showSidebar: false,
   sidebarLinks: [
     {
-      name: '统   计',
+      name: '总体概览',
       icon: 'ti-panel',
       path: '/admin/overview'
     },
     {
+      name: '专辑排行',
+      icon: 'ti-list',
+      path: '/admin/novel-list'
+    },
+    {
       name: '专辑管理',
-      icon: 'ti-text',
+      icon: 'ti-book',
       path: '/admin/typography'
     },
     {
